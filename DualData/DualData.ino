@@ -28,7 +28,7 @@ char * csv =
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
   CSV_Parser cp(csv, /*format*/ "ssssff");
 date = (char**)cp["Date"];
 weekday = (char**)cp["Weekday"];
@@ -57,7 +57,7 @@ void loop() {
   }
 
   //this is not working either
-//  if (currentMillis2 - startMillis2 >= 2000)  //test whether the period has elapsed - this determines when to do something
+//  if (currentMillis2 - startMillis2 >= 501)  //test whether the period has elapsed - this determines when to do something
 //  {
 //    Serial.print(timeInterval[frames]);
 //    startMillis2 = currentMillis2;  //IMPORTANT to save the start time of the current LED state.
