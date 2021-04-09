@@ -19,7 +19,7 @@ Accessing values by column number:
 void setup() {
   Serial.begin(115200);
   delay(5000);
-
+// my current theory is that there is a memory limitation that is result in nonsense being printed if I try and parse any more than this:
   char * csv_str = "Date, Weekday,Time,Time24,Mmol,TimeInterval,Extra\n" 
 "3-Sep-2019,Tuesday,4:11 AM,4:11,11,226,Test\n"
 "3-Sep-2019,Tuesday,7:57 AM,7:57,9.2,124,Test\n"
